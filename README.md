@@ -5,9 +5,9 @@ A serverless AWS security monitoring system that detects S3 activity using Cloud
 
 This project monitors important AWS activities and sends an email alert when something happens.
 
-I used AWS CloudTrail to track activities, EventBridge to detect the events, Lambda to process them, SQS to pass the messages, and SNS to send the final email notification.
+I used CloudTrail to record AWS activity, EventBridge to detect events, Lambda to process them, SQS to pass messages, and SNS to send the final email notification.
 
-For example, if someone uploads or deletes an object from the selected S3 bucket, the system detects the activity and sends an alert with details like the event, user, bucket, and time.
+For example, when someone uploads or deletes an object from the monitored S3 bucket, the system detects the activity and sends an alert with details such as the event, user, bucket, and time.
 
 ## AWS Services Used
 
@@ -21,22 +21,30 @@ For example, if someone uploads or deletes an object from the selected S3 bucket
 
 ## Project Flow
 
-S3 / AWS Activity  
-↓  
-CloudTrail  
-↓  
-EventBridge  
-↓  
-Lambda  
-↓  
-SQS  
-↓  
-Lambda  
-↓  
-SNS  
-↓  
-Email Alert
+S3
+↓
+CloudTrail
+↓
+EventBridge
+↓
+Lambda
+↓
+SQS
+↓
+Lambda
+↓
+SNS
+↓
+Email
 
-## Main Goal
+## Configuration
 
-The main goal of this project is to make AWS activity easier to monitor without checking CloudTrail logs manually every time.
+Before using the project, replace the example values with your own:
+
+- `YOUR_BUCKET_NAME`
+- `YOUR_LAMBDA_ARN`
+- `YOUR_SQS_QUEUE_URL`
+- `YOUR_SNS_TOPIC_ARN`
+- `YOUR_AWS_REGION`
+
+Do not upload real AWS credentials, account details, or private keys to GitHub.
