@@ -22,19 +22,19 @@ For example, when someone uploads or deletes an object from the monitored S3 buc
 ## Project Flow
 
 S3
-↓
+->
 CloudTrail
-↓
+->
 EventBridge
-↓
+->
 Lambda
-↓
+->
 SQS
-↓
+->
 Lambda
-↓
+->
 SNS
-↓
+->
 Email
 
 ## Configuration
