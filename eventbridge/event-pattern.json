@@ -10,7 +10,7 @@
     ],
     "requestParameters": {
       "bucketName": [
-        "cloud-activity-alert-arsath-2026"
+        "YOUR_BUCKET_NAME"
       ]
     }
   }
